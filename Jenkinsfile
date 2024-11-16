@@ -52,16 +52,43 @@ pipeline {
         }
 
 
-
-        stage('Check MySQL Connectivity') {
+//stage('Check MySQL Connectivity')
+        stage('Build') {
             steps {
-                script {
+               /* script {
                     sh '''
                     mysql -h mysql -P 3306 -u root -e ";" || echo "MySQL is not ready yet"
                     '''
-                }
+                }*/
             }
         }
+        stage('Test') {
+                    steps {
+                        /*script {
+                            sh '''
+                            mysql -h mysql -P 3306 -u root -e ";" || echo "MySQL is not ready yet"
+                            '''
+                        }*/
+                    }
+                }
+                stage('Docker Build') {
+                            steps {
+                                /*script {
+                                    sh '''
+                                    mysql -h mysql -P 3306 -u root -e ";" || echo "MySQL is not ready yet"
+                                    '''
+                                }*/
+                            }
+                        }
+                        stage('Integration Test') {
+                                    steps {
+                                       /* script {
+                                            sh '''
+                                            mysql -h mysql -P 3306 -u root -e ";" || echo "MySQL is not ready yet"
+                                            '''
+                                        }*/
+                                    }
+                                }
 
 
 
@@ -169,15 +196,15 @@ pipeline {
         }*/
 
 
-        stage('Verify JAR Creation') {
+       /* stage('Verify JAR Creation') {
                     steps {
                         dir('Backend') {
                             sh 'ls -l target/'
                         }
                     }
-                }
+                }*/
 
-                  stage('Publish to Nexus') {
+                  /*stage('Publish to Nexus') {
                     steps {
                         script {
                             echo "NEXUS_URL: ${NEXUS_URL}"
@@ -269,8 +296,7 @@ pipeline {
                             }
                         }
                     }
-                }
-
+                }*/
 
 
 
@@ -301,7 +327,7 @@ pipeline {
                  }*/
 
 
-        stage('Security Scan') {
+       /* stage('Security Scan') {
             steps {
                 script {
                     try {
@@ -329,7 +355,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 
 
 
