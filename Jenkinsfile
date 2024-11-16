@@ -208,7 +208,7 @@ pipeline {
                     steps {
                         script {
                             echo "NEXUS_URL: ${NEXUS_URL}"
-                             /*dir('Backend') {
+                             dir('Backend') {
                                                  script {
                                                      // Define artifact details based on the known pom.xml values
                                                              def groupId = "tn.esprit"
@@ -241,11 +241,11 @@ pipeline {
                                                          error "*** File could not be found or does not exist at ${artifactPath}."
                                                      }
                                                  }
-                                             }*/
+                                             }
 
                             // Publish the frontend artifact to Nexus (assuming it's a JAR for this example)
                             dir('Frontend') {
-                                /*script {
+                                script {
                                         // Build the Angular app
                                         sh 'npm install'  // Install dependencies
                                         sh 'npm run build --prod'  // Build the app
@@ -287,7 +287,7 @@ pipeline {
                                         } else {
                                             error "*** Frontend file could not be found or does not exist at ${frontendArtifactPath}."
                                         }
-                                    }*/
+                                    }
 
 
 
@@ -296,7 +296,7 @@ pipeline {
                             }
                         }
                     }
-                }*/
+                 }*/
 
 
 
