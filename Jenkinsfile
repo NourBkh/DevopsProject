@@ -77,7 +77,7 @@ pipeline {
 
 
 
-        /*stage('Build Backend and Frontend') {
+         stage('Build Backend and Frontend') {
                     parallel {
                         stage('Build Backend') {
                             steps {
@@ -95,9 +95,9 @@ pipeline {
                             }
                         }
                     }
-                }*/
+                }
 
-                /*stage('Test Backend and Frontend') {
+                stage('Test Backend and Frontend') {
                     parallel {
                         stage('Test Backend') {
                             steps {
@@ -115,9 +115,9 @@ pipeline {
                             }
                         }
                     }
-                }*/
+                }
 
-                /*stage('SonarQube Analysis Backend and Frontend') {
+                stage('SonarQube Analysis Backend and Frontend') {
                     parallel {
                         stage('SonarQube Analysis Backend') {
                             steps {
@@ -152,9 +152,9 @@ pipeline {
                             }
                         }
                     }
-                }*/
+                }
 
-        /*stage('Build Docker Images') {
+        stage('Build Docker Images') {
             steps {
                 // Build Docker image for backend
                 dir('Backend') {
@@ -166,7 +166,7 @@ pipeline {
                     sh "docker build -t ${IMAGE_NAME_FRONTEND}:${IMAGE_TAG_FRONTEND} ."
                 }
             }
-        }*/
+        }
 
 
         stage('Verify JAR Creation') {
@@ -181,7 +181,7 @@ pipeline {
                     steps {
                         script {
                             echo "NEXUS_URL: ${NEXUS_URL}"
-                             /*dir('Backend') {
+                             dir('Backend') {
                                                  script {
                                                      // Define artifact details based on the known pom.xml values
                                                              def groupId = "tn.esprit"
@@ -214,11 +214,11 @@ pipeline {
                                                          error "*** File could not be found or does not exist at ${artifactPath}."
                                                      }
                                                  }
-                                             }*/
+                                             }
 
                             // Publish the frontend artifact to Nexus (assuming it's a JAR for this example)
                             dir('Frontend') {
-                                /*script {
+                                script {
                                         // Build the Angular app
                                         sh 'npm install'  // Install dependencies
                                         sh 'npm run build --prod'  // Build the app
@@ -260,7 +260,7 @@ pipeline {
                                         } else {
                                             error "*** Frontend file could not be found or does not exist at ${frontendArtifactPath}."
                                         }
-                                    }*/
+                                    }
 
 
 
@@ -274,7 +274,7 @@ pipeline {
 
 
 
-        /*stage('Push Docker Images') {
+        stage('Push Docker Images') {
             steps {
                 script {
                     // Push Docker image for backend
@@ -289,7 +289,7 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
 
 
 
@@ -301,7 +301,7 @@ pipeline {
                  }*/
 
 
-        stage('Security Scan') {
+        /*stage('Security Scan') {
             steps {
                 script {
                     try {
@@ -329,7 +329,7 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
 
 
 
