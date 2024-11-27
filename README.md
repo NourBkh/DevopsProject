@@ -84,3 +84,38 @@ This project also incorporates continuous integration and delivery using Jenkins
 1. Clone the repository:
    ```bash
    git clone https://github.com/NourBkh/DevopsProject.git
+
+   ## Testing
+
+- **Frontend Testing:**
+  - Run the frontend tests using:
+    ```bash
+    npm test
+    ```
+
+- **Backend Testing:**
+  - Run the backend unit tests using Maven:
+    ```bash
+    mvn test
+    ```
+
+- **Code Coverage:**
+  - The backend uses JaCoCo for code coverage. After running the tests, check the generated code coverage report.
+
+## Jenkins Pipeline Workflow
+
+This project uses Jenkins to automate the build, test, and deployment processes. The Jenkins pipeline includes:
+
+1. **Build:** Build both the frontend and backend applications.
+2. **Test:** Run unit tests for both frontend and backend.
+3. **Deploy:** Deploy the applications to a staging environment.
+4. **SonarQube Analysis:** Perform static code analysis using SonarQube to ensure code quality.
+5. **Nexus Integration:** Store build artifacts in Nexus for further usage.
+
+## Dockerization
+
+The project is Dockerized using Docker Compose for both frontend and backend services. The `docker-compose.yml` file defines the services, networks, and volumes needed to run the application in a containerized environment.
+
+To run the application using Docker:
+```bash
+docker-compose up --build
