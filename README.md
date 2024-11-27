@@ -142,5 +142,5 @@ The project is Dockerized using Docker Compose for both frontend and backend ser
 To run the application using Docker:
 ```bash
 docker-compose up --build
-
+ 
 
