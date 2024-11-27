@@ -1,6 +1,7 @@
 # DevOps Project: Stock Management System
 
-This project is a **Stock Management System** developed using **React** (Frontend) and **Spring Boot** (Backend). The system includes advanced functionalities for managing stock entities and services, with automated testing and CI/CD pipelines integrated through **Jenkins**.
+This project is a fully integrated stock management system built using React (Frontend) and Spring Boot (Backend). The system supports advanced stock management functionalities, including CRUD operations and services, with automated testing and CI/CD pipelines implemented using Jenkins. It leverages Docker for containerization, ensuring seamless deployment across environments. The project is enhanced with SonarQube for static code analysis, Nexus for artifact storage, and Trivy for security scans.
+I’m proud of how I integrated various DevOps practices, particularly the CI/CD pipeline automation with Jenkins, and the use of Docker for a reliable deployment process. This project helped me learn not only full-stack development but also how to implement modern DevOps tools to streamline development and deployment processes. Additionally, I gained hands-on experience with tools like Jenkins, SonarQube, Nexus, and Docker, preparing me for real-world DevOps roles.
 
 ## Table of Contents
 
