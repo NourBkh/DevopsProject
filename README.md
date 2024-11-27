@@ -119,3 +119,25 @@ The project is Dockerized using Docker Compose for both frontend and backend ser
 To run the application using Docker:
 ```bash
 docker-compose up --build
+
+## SonarQube and Nexus Integration
+
+- **SonarQube:** The project integrates SonarQube for static code analysis to ensure code quality and maintainability. It performs automatic analysis of the codebase and generates reports, which are integrated into the Jenkins pipeline.
+  
+- **Nexus:** Nexus is used for storing build artifacts and enabling versioning of software components. Once the build is completed, the artifacts (e.g., JAR files) are pushed to Nexus for future use and deployment.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements for this project, feel free to open an issue or submit a pull request. When contributing, please make sure to follow the existing coding style and add appropriate tests for new features or bug fixes.
+
+### How to Contribute:
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your forked repository.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
