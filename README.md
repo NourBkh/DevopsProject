@@ -112,13 +112,6 @@ This project uses Jenkins to automate the build, test, and deployment processes.
 4. **SonarQube Analysis:** Perform static code analysis using SonarQube to ensure code quality.
 5. **Nexus Integration:** Store build artifacts in Nexus for further usage.
 
-## Dockerization
-
-The project is Dockerized using Docker Compose for both frontend and backend services. The `docker-compose.yml` file defines the services, networks, and volumes needed to run the application in a containerized environment.
-
-To run the application using Docker:
-```bash
-docker-compose up --build
 
 ## SonarQube and Nexus Integration
 
@@ -140,4 +133,14 @@ Contributions are welcome! If you have suggestions or improvements for this proj
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Dockerization
+
+The project is Dockerized using Docker Compose for both frontend and backend services. The `docker-compose.yml` file defines the services, networks, and volumes needed to run the application in a containerized environment.
+
+To run the application using Docker:
+```bash
+docker-compose up --build
+
 
